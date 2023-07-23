@@ -1,0 +1,16 @@
+<main>
+    <!-- products -->
+    <div class="container">
+        <!-- slogan -->
+        <div class="slogan">
+            <p>We believe a cup of coffee is one of the most important, simple <span
+                    class="pleasures">pleasures</span> in life
+            <p>
+        </div>
+        <div class="product-list">
+            <app-product *ngFor="let coffeeProduct of productList" [product]="coffeeProduct"></app-product>
+            
+            
+        </div>
+    </div>
+</main>

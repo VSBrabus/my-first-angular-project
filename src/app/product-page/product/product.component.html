@@ -1,0 +1,35 @@
+<div class="product">
+    <div class="image-container">
+        <img [src]="product.image" [alt]="product.name">
+        <div class="spinner-container" *ngIf="product.hasSpinner">
+            <object data="assets/images/Rotate=One.svg"></object>
+        </div>
+    </div>
+    
+    <div class="description">
+        <div class="product-price">
+            <span class="coffee-title">{{product.name}}</span>
+            <div class="coffee-price-div">
+                <span>${{product.price}}</span>
+            </div>
+        </div>
+
+        <form action="" class="radio-button">
+            <div class="coffee-volume">
+                <input type="radio" id="250ml" name="cup" value="250ml">
+                <label for="html">250ml</label><br>
+                <input type="radio" id="500ml" name="cup" value="500ml">
+                <label for="html">500ml</label>
+            </div>
+            <div class="sugar">
+                <input type="checkbox" id="addsugar" name="suggar" value="sugar">
+                <label for="sugar">add sugar</label>
+            </div>
+        </form>
+
+        <div class="addtocart-info">
+            <button type="button" (click)="updateAddToCart()">add to cart</button>
+            <object data="assets/images/info.svg"></object>
+        </div>
+    </div>
+</div>
