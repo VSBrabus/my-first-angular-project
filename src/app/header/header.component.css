@@ -71,6 +71,9 @@ header{
     width: 140px;
   }
 }
+a{
+  text-decoration: none;
+}
 
 @media screen and (max-width: 900px) {
   .veloce-coffee-shop {

@@ -8,14 +8,22 @@ import { Product } from './product.model';
   styleUrls: ['./product.component.css'],
 
 })
+
 export class ProductComponent{
+ 
   constructor(private clickCountService: ClickCountService){
     
   }
+
   @Input() product:Product
 
-
-
+  onSubmit() {
+    console.log('Product Name:', this.product.name);
+    console.log('Product Price:', this.product.price);
+    console.log('Selected Size:', this.product.size);
+    console.log('Add Sugar:', this.product.addSugar);
+  }
+  
   updateAddToCart() {
     
     this.clickCountService.increaseClickCount()

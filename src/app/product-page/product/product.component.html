@@ -9,27 +9,33 @@
     <div class="description">
         <div class="product-price">
             <span class="coffee-title">{{product.name}}</span>
+            <input hidden type="text" id="product-name" [(ngModel)]="product.name" name="productName" required>
             <div class="coffee-price-div">
                 <span>${{product.price}}</span>
+                <input hidden type="text" id="product-price" [(ngModel)]="product.price" name="productPrice" required>
             </div>
         </div>
 
-        <form action="" class="radio-button">
+        <form action="" class="radio-button" (ngSubmit)="onSubmit()">
             <div class="coffee-volume">
-                <input type="radio" id="250ml" name="cup" value="250ml">
+                <!-- <input type="radio" id="250ml" name="cup" value="250ml"> -->
+                <input type="radio" id="250ml" [(ngModel)]="product.size" name="size" value="250ml">
                 <label for="html">250ml</label><br>
-                <input type="radio" id="500ml" name="cup" value="500ml">
+                <!-- <input type="radio" id="500ml" name="cup" value="500ml"> -->
+                <input type="radio" id="500ml" [(ngModel)]="product.size" name="size" value="500ml">
                 <label for="html">500ml</label>
             </div>
             <div class="sugar">
-                <input type="checkbox" id="addsugar" name="suggar" value="sugar">
+                <!-- <input type="checkbox" id="addsugar" name="suggar" value="sugar"> -->
+                <input type="checkbox" id="add-sugar" [(ngModel)]="product.addSugar" name="addSugar">
                 <label for="sugar">add sugar</label>
+            </div>
+            <div class="addtocart-info">
+                <button type="submit" (click)="updateAddToCart()">add to cart</button>
+                <object data="assets/images/info.svg"></object>
             </div>
         </form>
 
-        <div class="addtocart-info">
-            <button type="button" (click)="updateAddToCart()">add to cart</button>
-            <object data="assets/images/info.svg"></object>
-        </div>
+        
     </div>
 </div>
