@@ -10,7 +10,7 @@ export class ProductsService {
   productList: Product[] = [];
 
   fetchProducts():  Observable<Product[]> {
-    const url = '/assets/data/products.json';
+    const url = 'assets/data/products.json';
     return this.http.get<Product[]>(url)
   }
 }
