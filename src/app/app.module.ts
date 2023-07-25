@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ProductComponent } from './product-page/product/product.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsResolver } from './resolvers/products.resolver';
 
 
 @NgModule({
@@ -15,16 +17,17 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     AppComponent,
     HeaderComponent,
     ProductPageComponent,
-    ProductComponent,
+    ProductComponent
     // ShoppingCartComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductsResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

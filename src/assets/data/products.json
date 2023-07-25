@@ -1,0 +1,69 @@
+[
+    {
+        "id": "1",
+        "name": "Extra Latte",
+        "imgUrl": "assets/images/Cup1.png",
+        "volume": "250ml",
+        "prices": {
+          "250ml": 6.99,
+          "500ml": 8.99
+        },
+        "addSugar": false,
+        "stamp": true,
+        "details": {
+          "calories": 65,
+          "totalFat": 2.4,
+          "cholesterol": 9.6,
+          "sodium": 55,
+          "totalCarbohydrate": 6.8,
+          "protein": 4.2,
+          "vitaminD": 1.4,
+          "cancium": 158
+        }
+      },
+      {
+        "id": "2",
+        "name": "Cappuccino",
+        "imgUrl": "assets/images/Cup2.png",
+        "volume": "250ml",
+        "prices": {
+          "250ml": 7.99,
+          "500ml": 9.99
+        },
+        "addSugar": false,
+        "stamp": false,
+        "details": {
+          "calories": 57,
+          "totalFat": 1.8,
+          "cholesterol": 7.3,
+          "sodium": 64,
+          "totalCarbohydrate": 5.5,
+          "protein": 3.9,
+          "vitaminD": 2,
+          "cancium": 169
+        }
+      },
+      {
+        "id": "3",
+        "name": "Moccachino",
+        "imgUrl": "assets/images/Cup3.png",
+        "volume": "250ml",
+        "prices": {
+          "250ml": 5.29,
+          "500ml": 7.29
+        },
+        "addSugar": false,
+        "stamp": false,
+        "details": {
+          "calories": 73,
+          "totalFat": 4.3,
+          "cholesterol": 12.1,
+          "sodium": 31,
+          "totalCarbohydrate": 8.8,
+          "protein": 2.1,
+          "vitaminD": 2.2,
+          "cancium": 111
+        }
+    }
+    
+]

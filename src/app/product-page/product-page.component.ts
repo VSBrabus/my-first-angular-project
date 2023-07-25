@@ -1,17 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from './product/product.model';
+import { HttpClient } from '@angular/common/http';
+import { ProductsService } from '../services/products.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-page',
   templateUrl: './product-page.component.html',
-  styleUrls: ['./product-page.component.css']
+  styleUrls: ['./product-page.component.css'],
 })
-export class ProductPageComponent {
-  productList: Product[] = [
-    new Product("Extra Latte", 7.99, "assets/images/Cup1.png", "", false, true,),
-    new Product("Cappuccino", 9.99, "assets/images/Cup2.png","", false, false),
-    new Product("Mochaccino", 7.98, "assets/images/Cup3.png","", false, false),
-  ];
+export class ProductPageComponent implements OnInit {
+  constructor(private activatedRoute: ActivatedRoute) {}
 
-  
+  productList: Product[] = [];
+
+  ngOnInit(): void {
+    
+
+    this.activatedRoute.data.subscribe((response: any) => {
+      (<Product[]>response.products).forEach(element => {
+        let newProduct=new Product(element.id,element.name,element.imgUrl,element.volume,element.prices,element.addSugar,element.stamp,element.details)
+        this.productList.push(newProduct)
+      });
+    })
+  }
 }

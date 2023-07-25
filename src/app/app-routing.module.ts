@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ProductsResolver } from './resolvers/products.resolver';
 
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/product-page', pathMatch: 'full'},
-  { path: 'product-page', component: ProductPageComponent },
+  { path: 'product-page', component: ProductPageComponent, resolve: {products: ProductsResolver} },
   // { path: 'shopping-cart', component: ShoppingCartComponent },
   
   // Lazy loaded module for shopping-cart

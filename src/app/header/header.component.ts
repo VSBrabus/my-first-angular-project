@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ClickCountService } from '../click-count.service';
+import { ShoppingCartService } from '../services/shopping-cart.service';
+import { Product } from '../product-page/product/product.model';
 
 @Component({
   selector: 'app-header',
@@ -9,11 +10,11 @@ import { ClickCountService } from '../click-count.service';
 
 })
 export class HeaderComponent implements OnInit{
-  clickCountObject: {clickCount: number};
-  constructor(private clickCountService: ClickCountService){
+  shoppingCart: Product[];
+  constructor(private shoppingCartService: ShoppingCartService){
     
   }
   ngOnInit(): void {
-      this.clickCountObject=this.clickCountService.clickCountObject
+      this.shoppingCart=this.shoppingCartService.productList
   }
 }
