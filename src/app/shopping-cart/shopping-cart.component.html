@@ -1,3 +1,19 @@
 <!-- <app-header></app-header> -->
-<h2>Shopping Cart</h2>
-<!-- Display the items in the shopping cart here -->
+<main>
+    <div class="shopping-cart-plus-text">
+        <div class="shopping-cart-shopping">
+            <span>Shopping cart</span>
+        </div>
+
+        <div class="prod-plus-check">
+            <div class="choosen-product-block">
+                <app-shopping-cart-product *ngFor="let coffeeProduct of productList" [product]="coffeeProduct"></app-shopping-cart-product>
+            </div>
+            <div>
+                <app-checkout></app-checkout>
+            </div>
+        </div>
+        
+        
+    </div>
+</main>

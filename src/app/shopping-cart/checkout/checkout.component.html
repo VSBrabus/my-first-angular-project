@@ -1,0 +1,21 @@
+<div class="checkout-block">
+    <p class="checkout-text">Checkout</p>
+    <div class="cart-items">
+        <!-- Your cart items will go here -->
+        <div>
+            <app-checkout-item *ngFor="let coffeeProduct of productList" [product]="coffeeProduct"></app-checkout-item>
+        </div>
+        
+        <div class="delivery">
+            <span class="delivery-name">Delivery</span>
+            <span class="delivery-price">$15.00</span>
+        </div>
+            
+        <!-- Add more cart items as needed -->
+    </div>
+    <div class="total-price">
+        <span class="total-name">Total:</span>
+        <span class="total-amount">${{Math.round(shoppingCartService.calculateCartPrice()*100)/100}}</span>
+    </div>
+    <button class="checkout-button">to pay</button>
+</div>

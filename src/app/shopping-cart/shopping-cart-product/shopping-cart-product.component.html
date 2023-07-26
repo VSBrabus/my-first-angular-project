@@ -1,0 +1,40 @@
+<div class="cart-product-shopping-cart">
+    <div class="product-image-shopping-cart">
+        <img src="{{product.imgUrl}}" alt="Cappuccino">
+    </div>
+    <div class="product-details-shopping-cart">
+        <div class="product-details-shopping-cart-text-price">
+            <p class="product-details-shopping-cart-text">
+                {{product.name}}
+            </p>
+            <p class="product-details-shopping-cart-price">
+                ${{product.prices[product.volume]}}
+            </p>
+        </div>
+        <div class="product-details-shopping-cart-adds">
+            <div class="product-details-shopping-cart-adds-volume">
+                <object data="assets/images/Cup.svg"></object>
+                <p>
+                    {{product.volume}}
+                </p>
+                
+            </div>
+            <div *ngIf="product.addSugar" class="product-details-shopping-cart-adds-sugar">
+                <object data="assets/images/Sugar.svg"></object>
+                <p>
+                    Sugar
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="product-buttons-shopping-cart">
+        <div class="custom-button-shopping-cart">
+            <button class="minus-button-shopping-cart"><object data="assets/images/minushome.svg"></object></button>
+            <span class="quantity-shopping-cart">1</span>
+            <button class="plus-button-shopping-cart"><object data="assets/images/plushome.svg"></object></button>
+        </div>
+        <button class="delete-button-shopping-cart">
+            <object data="assets/images/Icon.svg"></object>
+        </button>
+    </div>
+</div>
