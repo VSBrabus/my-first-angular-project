@@ -8,9 +8,9 @@
             <p>
         </div>
         <div class="product-list">
-            <app-product *ngFor="let coffeeProduct of productList" [product]="coffeeProduct"></app-product>
-            
-            
+            <app-product *ngFor="let coffeeProduct of productList" [product]="coffeeProduct" (openProductInfoEvent)="openProductInfo($event)"></app-product>     
+
+            <app-info [infoComponentVisible]="infoComponentVisible" [product]="activeInfoProduct" (closeInfoButtonClickedEvent)="hideProductInfo()"></app-info>
         </div>
     </div>
 </main>

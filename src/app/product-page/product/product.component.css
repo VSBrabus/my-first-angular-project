@@ -59,15 +59,18 @@ input[type='checkbox']:checked:after {
     right: 30px;
     width: 100px;
     height: 100px;
-    animation: spin 4s linear infinite;
+    animation: spin 8s linear infinite;
   }
   
   @keyframes spin {
     0% {
       transform: rotate(0deg);
     }
-    100% {
-      transform: rotate(360deg);
+    50% {
+      transform: rotate(180deg);
+    }
+    100%{
+      transform: rotate(0deg);
     }
   }
 
@@ -168,7 +171,8 @@ input[type='checkbox']:checked:after {
     transition: 0.3s;
   }
 
-  .addtocart-info object:hover {
+  .addtocart-info svg:hover {
+    cursor: pointer;
     border-radius: 64px;
     border: 2px solid var(--yellow);
   } 

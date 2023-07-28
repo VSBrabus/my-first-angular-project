@@ -11,6 +11,7 @@ export class ProductComponent {
   constructor(private shoppingCartService: ShoppingCartService) {}
 
   @Input() product: Product;
+  @Output() openProductInfoEvent: EventEmitter<Product> = new EventEmitter<Product>()
 
   onSubmit() {
     console.log('Product Name:', this.product.name);
@@ -32,5 +33,10 @@ export class ProductComponent {
     );
     this.shoppingCartService.productList.push(addedProductCopy);
     console.log(this.shoppingCartService.productList);
+  }
+
+  openProductInfo(product: Product) {
+    console.log(product)
+    this.openProductInfoEvent.emit(product)
   }
 }

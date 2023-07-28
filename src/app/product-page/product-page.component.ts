@@ -10,9 +10,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./product-page.component.css'],
 })
 export class ProductPageComponent implements OnInit {
-  constructor(private activatedRoute: ActivatedRoute) {}
+  infoComponentVisible = false;
 
+  constructor(private activatedRoute: ActivatedRoute) {}
+  
   productList: Product[] = [];
+  activeInfoProduct: Product;
 
   ngOnInit(): void {
     
@@ -24,4 +27,14 @@ export class ProductPageComponent implements OnInit {
       });
     })
   }
+
+  openProductInfo(product: Product) {
+    this.activeInfoProduct=product
+    this.infoComponentVisible=true
+  }
+
+  hideProductInfo() {
+    this.infoComponentVisible = false
+  }
+  
 }

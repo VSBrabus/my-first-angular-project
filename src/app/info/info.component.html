@@ -1,0 +1,59 @@
+<!-- info card -->
+<div class="info-about-coffee" [@infoSlide]="infoComponentVisible ? 'open' : 'close'">
+    <div class="info-coffee-name">
+        <div class="product-price">
+            <span *ngIf="product" class="coffee-title-info">{{product.name}}</span>
+            <div class="coffee-price-div-info">
+                <span *ngIf="product">${{product.getPrice()}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="info-coffee-img">
+        <img *ngIf="product" [src]="product.imgUrl" [alt]="product.name">
+        <div  *ngIf="product && product.stamp" class="spinner-container-info">
+            <object data="assets/images/Rotate=One.svg"></object>
+        </div>
+    </div>
+
+    <div class="info-spec-list">
+        <div class="info-spec">
+            <div class="info-spec-elements">
+                <span class="item-spec-name">Calories</span>
+                <span *ngIf="product" class="item-spec-value">{{product.details.calories}}</span>
+            </div>
+            <div class="info-spec-elements">
+                <span class="item-spec-name">Total Fat</span>
+                <span *ngIf="product" class="item-spec-value">{{product.details.totalFat}}</span>
+            </div>
+            <div class="info-spec-elements">
+                <span class="item-spec-name">Cholesterol</span>
+                <span *ngIf="product" class="item-spec-value">{{product.details.cholesterol}}</span>
+            </div>
+            <div class="info-spec-elements">
+                <span class="item-spec-name">Sodium</span>
+                <span *ngIf="product" class="item-spec-value">{{product.details.sodium}}</span>
+            </div>
+            <div class="info-spec-elements">
+                <span class="item-spec-name">Total Carbohydrate</span>
+                <span *ngIf="product" class="item-spec-value">{{product.details.totalCarbohydrate}}</span>
+            </div>
+            <div class="info-spec-elements">
+                <span class="item-spec-name">Protein</span>
+                <span *ngIf="product" class="item-spec-value">{{product.details.protein}}</span>
+            </div>
+        </div>
+        <div class="info-spec-two">
+            <div class="info-spec-elements">
+                <span class="item-spec-name">Vitamin D</span>
+                <span *ngIf="product" class="item-spec-value">{{product.details.vitaminD}}</span>
+            </div>
+            <div class="info-spec-elements">
+                <span class="item-spec-name">Calcium</span>
+                <span *ngIf="product" class="item-spec-value">{{product.details.calcium}}</span>
+            </div>
+        </div>
+    </div>
+    
+    <button class="info-button" (click)="closeInfoButtonClickedEvent.emit()">cool, got it</button>
+
+</div>

@@ -6,10 +6,12 @@
   --orange: #ff7733;
   --deep-blue: #023A6B;
   --yellow: #FFBD5C;
+  --border: #F0F0F0;
 }
 
 body{
     background: var(--light-cream);
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }

@@ -10,6 +10,8 @@ import { ProductComponent } from './product-page/product/product.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsResolver } from './resolvers/products.resolver';
+import { InfoComponent } from './info/info.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { ProductsResolver } from './resolvers/products.resolver';
     AppComponent,
     HeaderComponent,
     ProductPageComponent,
-    ProductComponent
+    ProductComponent,
+    InfoComponent
     // ShoppingCartComponent,
 
   ],
@@ -25,7 +28,8 @@ import { ProductsResolver } from './resolvers/products.resolver';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [ProductsResolver],
   bootstrap: [AppComponent]
