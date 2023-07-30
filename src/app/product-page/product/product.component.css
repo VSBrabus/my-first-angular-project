@@ -186,111 +186,6 @@ input[type='radio']:checked:after{
 
   /* -----------------------------------------NEW-------------------------------------- */
 
-  /* custom radio */
-
-
-/* input[type="radio"] {
-  opacity: 0;
-  position: absolute;
-  
-  
-}
-
-
-.radio-container {
-  display: inline-block;
-  position: relative;
-   margin-right: 10px; 
-  
-   
-}
-
-
-.circle,
-.dot {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-}
-
-
-
-.circle {
-  background-color: var(--white);
- 
-}
-
-
-.dot {
-  background-color: var(--white); 
-  position: absolute;
-  height:18px;
-  width:18px;
-  top: 3px;
-  left: 3px;
-  
-  
-}
-
-
-input[type="radio"]#250ml:checked + .radio-label .dot{
-  animation: moveDot 0.3s ease-in-out forwards;
-}
-input[type="radio"]#option2:checked + .radio-labels .dot{
-  animation: moveDots 0.3s ease-in-out forwards;
-}
-
-.radio-label,
-.radio-labels{
-  display: flex;
-  align-items: flex-start;
-  gap: 24px; 
-  color: var(--deep-blue);
-  font-family: "Open Sans", "Helvetica Neve", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%; 
-  text-transform: uppercase;
-  position: relative;
- 
-}
-
-
-@keyframes moveDot {
-  0% {
-    transform: translateX(130%) scale(0);
-    display:none;
-  }
-  50%{
-   
-    display:none;
-  }
-  100% {
-    transform: translateX(0) scale(1);
-    background-color: var(--orange);
-    
-  }
-}
-
-
-@keyframes moveDots {
-  0% {
-    transform: translateX(-130%) scale(0);
-    
-    display:none;
-  }
-  50%{
-   
-    display:none;
-  }
-  100% {
-    transform: translateX(0) scale(1);
-    background-color: var(--orange);
-    
-    
-  }
-} */
 
 /* --------------------add sugar!!!!! --------------------*/
 
@@ -395,14 +290,8 @@ input[type="checkbox"] {
 }
 
 .add-to-cart-label {
-  /* padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer; */
-
-  /* new */
-  /* display: flex; */
+/* new */
+  
   padding: 16px 24px;
   justify-content: center;
   background-color: var(--light-cream);
@@ -426,10 +315,7 @@ background-color: var(--yellow);
 transition: 0.3s;
 }
 
-/* .quantity-buttons {
-  display: none;
-  margin-top: 10px;
-} */
+
 
 .add-to-cart-checkbox:checked + .add-to-cart-label {
   display: none;
@@ -506,12 +392,7 @@ border: 2px var(--orange);
 transition: 0.5s;
 color: var(--white);
 }
-/* .minus-button-shopping-cart:hover,
-.plus-button-shopping-cart:hover{
-background-color: var(--orange);
-color: var(--white);
-border: 2px var(--yellow);
-} */
+
 
 
 /* ------------media screens */
