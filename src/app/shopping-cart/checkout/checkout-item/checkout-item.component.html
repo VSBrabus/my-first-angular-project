@@ -1,4 +1,4 @@
 <div class="cart-item">
-    <span class="item-name">{{product.name}}</span>
-    <span class="item-price">${{product.prices[product.volume]}}</span>
+    <span class="item-name"> X{{productAndQunatity.quantity}} {{productAndQunatity.product.name}}</span>
+    <span class="item-price">${{productAndQunatity.product.prices[productAndQunatity.product.volume] * productAndQunatity.quantity}}</span>
 </div>

@@ -7,10 +7,10 @@
 
         <div class="prod-plus-check">
             <div class="choosen-product-block">
-                <app-shopping-cart-product *ngFor="let coffeeProduct of productList" [product]="coffeeProduct"></app-shopping-cart-product>
+                <app-shopping-cart-product *ngFor="let productAndQuantity of productsWithQuantity" [product]="productAndQuantity.product" [quantity]="productAndQuantity.quantity"></app-shopping-cart-product>
             </div>
             <div>
-                <app-checkout></app-checkout>
+                <app-checkout [productsAndQuantity]="productsWithQuantity"></app-checkout>
             </div>
         </div>
         

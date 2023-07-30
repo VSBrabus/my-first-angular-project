@@ -158,6 +158,14 @@
     flex-shrink: 0;
     border-radius: 50%;
     border: 2px;
+    background-color: var(--light-cream);
+    color: var(--deep-blue);
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
   }
   
   .minus-button-shopping-cart:hover,

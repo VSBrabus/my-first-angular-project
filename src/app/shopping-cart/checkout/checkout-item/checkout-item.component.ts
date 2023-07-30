@@ -8,5 +8,5 @@ import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
   styleUrls: ['./checkout-item.component.css']
 })
 export class CheckoutItemComponent {
-  @Input() product:Product
+  @Input() productAndQunatity:{ product: Product; quantity: number }
 }

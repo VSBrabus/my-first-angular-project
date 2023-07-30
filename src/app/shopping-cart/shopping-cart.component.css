@@ -32,3 +32,11 @@ main {
     display: flex;
     gap: 50px;
   }
+  @media screen and (max-width: 900px) {
+    .shopping-cart-plus-text{
+      position: relative;
+      display: block;
+    }
+    
+
+  }

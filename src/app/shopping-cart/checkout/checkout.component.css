@@ -3,7 +3,7 @@
     background: var(--white);
     margin: -16px auto;
     display: flex; /* raspolozenije */
-    width: 288px;
+    /* width: 288px; */
     
     padding: 10px 24px 24px 24px;
     flex-direction: column;

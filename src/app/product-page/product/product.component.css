@@ -1,32 +1,31 @@
-input[type='radio']:after,
-input[type='checkbox']:after{
-    width: 20px;
-    height: 20px;
-    border-radius: 15px;
-    top: -10px;
-    left: -5px;
-    position: relative;
-    background-color: var(--white);
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 4px solid var(--white);
+
+input[type='radio']:after{
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  top: -10px;
+  left: -5px;
+  position: relative;
+  background-color: var(--white);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 4px solid var(--white);
 }
 
-input[type='radio']:checked:after,
-input[type='checkbox']:checked:after {
-    width: 20px;
-    height: 20px;
-    border-radius: 15px;
-    top: -10px;
-    left: -5px;
-    position: relative;
-    background-color: var(--orange);
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 4px solid var(--white);
-    transition: 0.6s;
+input[type='radio']:checked:after{
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  top: -10px;
+  left: -5px;
+  position: relative;
+  background-color: var(--orange);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 4px solid var(--white);
+  transition: 0.6s;
 }
 
 .coffee-title{
@@ -185,6 +184,337 @@ input[type='checkbox']:checked:after {
     width: 100%;
   }
 
+  /* -----------------------------------------NEW-------------------------------------- */
+
+  /* custom radio */
+
+
+/* input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  
+  
+}
+
+
+.radio-container {
+  display: inline-block;
+  position: relative;
+   margin-right: 10px; 
+  
+   
+}
+
+
+.circle,
+.dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+
+
+.circle {
+  background-color: var(--white);
+ 
+}
+
+
+.dot {
+  background-color: var(--white); 
+  position: absolute;
+  height:18px;
+  width:18px;
+  top: 3px;
+  left: 3px;
+  
+  
+}
+
+
+input[type="radio"]#250ml:checked + .radio-label .dot{
+  animation: moveDot 0.3s ease-in-out forwards;
+}
+input[type="radio"]#option2:checked + .radio-labels .dot{
+  animation: moveDots 0.3s ease-in-out forwards;
+}
+
+.radio-label,
+.radio-labels{
+  display: flex;
+  align-items: flex-start;
+  gap: 24px; 
+  color: var(--deep-blue);
+  font-family: "Open Sans", "Helvetica Neve", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; 
+  text-transform: uppercase;
+  position: relative;
+ 
+}
+
+
+@keyframes moveDot {
+  0% {
+    transform: translateX(130%) scale(0);
+    display:none;
+  }
+  50%{
+   
+    display:none;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    background-color: var(--orange);
+    
+  }
+}
+
+
+@keyframes moveDots {
+  0% {
+    transform: translateX(-130%) scale(0);
+    
+    display:none;
+  }
+  50%{
+   
+    display:none;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    background-color: var(--orange);
+    
+    
+  }
+} */
+
+/* --------------------add sugar!!!!! --------------------*/
+
+/* Reset default checkbox styles */
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Style for the custom checkbox container */
+.custom-checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px; /* Adjust spacing between checkbox and label */
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+/* Style for the custom checkbox border */
+.checkbox-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: var(--yellow);
+  border: 2px solid var(--yellow);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+
+/* Style for the falling ball */
+.ball {
+  position: absolute;
+  top: -24px;
+  left: 4px;
+  height: 16px;
+  width: 16px;
+  background-color: var(--white);
+  border-radius: 50%;
+  animation: fall 0.5s ease-in-out forwards;
+  opacity: 0;
+  
+}
+
+
+/* Style for the text label */
+.label-text {
+  font-size: 14px;
+  margin-left: 12px; /* Adjust spacing between checkbox and label */
+}
+
+
+/* Style for the checkmark when the checkbox is checked */
+.custom-checkbox input:not(:checked) + .checkbox-border .ball {
+  animation: bounce 0.3s ease-in-out;
+  
+}
+
+/* Keyframes for the falling animation */
+@keyframes fall {
+  0% {
+    top: -16px;
+    opacity: 0;
+  }
+  100% {
+    top: 4px;
+    opacity: 1;
+    
+  }
+}
+
+/* Keyframes for the bouncing animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+
+/* ---------------add to cart!!!!-------- */
+/* button custom main */
+.button-container {
+  text-align: center;
+  /* margin-top: 50px; */
+  
+}
+
+.add-to-cart-checkbox {
+  display: none;
+  
+}
+
+.add-to-cart-label {
+  /* padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer; */
+
+  /* new */
+  /* display: flex; */
+  padding: 16px 24px;
+  justify-content: center;
+  background-color: var(--light-cream);
+  align-items: center;
+  gap: 10px;
+  border-radius: 64px;
+  border: 2px solid var(--yellow);
+  color: var(--deep-blue);
+  font-family: "Open Sans", "Helvetica Neve", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px; /* 114.286% */
+  text-transform: uppercase;
+  cursor: pointer;
+    
+  
+}
+.add-to-cart-label:hover {
+background-color: var(--yellow);
+transition: 0.3s;
+}
+
+/* .quantity-buttons {
+  display: none;
+  margin-top: 10px;
+} */
+
+.add-to-cart-checkbox:checked + .add-to-cart-label {
+  display: none;
+  
+}
+
+.add-to-cart-checkbox:checked ~ .quantity-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.quantity-buttons button {
+  padding: 5px 10px;
+}
+.quantity-buttons{
+    display: none;
+    margin-top: 10px;
+
+  justify-content: center;
+  align-items: center; 
+  border-radius: 30px;
+  border: 2px solid var(--yellow);
+  
+  width: 143px;
+  height: 48px;
+  background-color: var(--yellow);
+
+  
+}
+
+.quantity {
+  /* padding: 0 10px; */
+  padding: 0 20px;
+    color: var(--deep-blue);
+    text-align: center;
+    font-family: "Open Sans", "Helvetica Neve", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 114.286% */
+
+}
+
+.minus-button-shopping-cart,
+.plus-button-shopping-cart{
+display: flex;
+width: 48px;
+height: 48px;
+padding: 16px 24px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 50%;
+border: 2px;
+
+background-color: var(--yellow);
+font-size: 20px;
+color: var(--deep-blue);
+
+}
+
+.minus-button-shopping-cart:hover{
+background: var(--orange);
+border: 2px var(--orange);
+transition: 0.5s;
+color: var(--white);
+}
+
+.plus-button-shopping-cart:hover{
+background-color: var(--orange);
+border: 2px var(--orange);
+transition: 0.5s;
+color: var(--white);
+}
+/* .minus-button-shopping-cart:hover,
+.plus-button-shopping-cart:hover{
+background-color: var(--orange);
+color: var(--white);
+border: 2px var(--yellow);
+} */
+
+
+/* ------------media screens */
   @media screen and (max-width: 900px) {
     .coffee-volume .sugar {
         font-size: 12px;

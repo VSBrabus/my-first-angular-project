@@ -8,4 +8,6 @@ import { Product } from 'src/app/product-page/product/product.model';
 })
 export class ShoppingCartProductComponent {
   @Input() product:Product
+
+  @Input() quantity: number
 }

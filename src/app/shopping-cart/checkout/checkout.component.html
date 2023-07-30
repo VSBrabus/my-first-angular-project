@@ -3,7 +3,7 @@
     <div class="cart-items">
         <!-- Your cart items will go here -->
         <div>
-            <app-checkout-item *ngFor="let coffeeProduct of productList" [product]="coffeeProduct"></app-checkout-item>
+            <app-checkout-item *ngFor="let coffeeProduct of productsAndQuantity" [productAndQunatity]="coffeeProduct"></app-checkout-item>
         </div>
         
         <div class="delivery">
